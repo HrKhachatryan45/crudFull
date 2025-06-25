@@ -15,6 +15,11 @@ const getProducts = async (req, res) => {
 }
 
 const addProduct = async (req, res) => {
+
+    if (!req.user.isAdmin) {
+        return res.status(400).json({ message: 'Unauthorized ! Only admins !' });
+    }
+
     const {title, price } = req.body;
     try{
         if (!req.file) {

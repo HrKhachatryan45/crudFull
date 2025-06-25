@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const multer = require('multer');
 const { uploadImage, getProducts, addProduct } = require('../controllers/adminController');
+const protectRoute = require('../middlewares/protectRoute');
 
 const storage = multer.diskStorage({
     destination:(req,file,cb) => {
@@ -15,5 +16,5 @@ const storage = multer.diskStorage({
 const upload = multer({storage:storage})
 
 router.get('/getProducts',getProducts)
-router.post('/addProduct',upload.single('productImage'),addProduct)
+router.post('/addProduct',protectRoute,upload.single('productImage'),addProduct)
 module.exports = router;
