@@ -1,0 +1,154 @@
+<style>
+  .footer {
+    background-color: #00c853;
+    color: white;
+    padding: 40px 20px 20px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .footer-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    text-align: left;
+  }
+
+  .footer h3 {
+    margin-bottom: 16px;
+    font-size: 18px;
+    border-bottom: 2px solid white;
+    padding-bottom: 6px;
+  }
+
+  .footer ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer ul li {
+    margin-bottom: 8px;
+  }
+
+  .footer ul li a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+
+  .footer ul li a:hover {
+    opacity: 0.8;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 16px;
+    font-size: 22px;
+    margin-top: 10px;
+  }
+
+  .social-icons a {
+    text-decoration: none;
+  }
+
+  .social-icons i {
+    transition: transform 0.3s;
+  }
+
+  .social-icons i:hover {
+    transform: scale(1.2);
+  }
+
+  /* Brand colors */
+  .fa-instagram {
+    color: #e4405f;
+  }
+
+  .fa-facebook {
+    color: #3b5998!important;
+  }
+
+  .fa-twitter {
+    color: #1da1f2;
+  }
+
+  .fa-telegram {
+    color: #0088cc;
+  }
+
+  .newsletter input[type="email"] {
+    padding: 8px;
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    margin-top: 10px;
+  }
+
+  .newsletter button {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    background-color: white;
+    color: #00c853;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .newsletter button:hover {
+    background-color: #f4f4f4;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    opacity: 0.9;
+  }
+</style>
+
+
+<footer class="footer">
+  <div class="footer-container">
+    <div>
+      <h3>Contact</h3>
+      <p>📍 105 Teryan Street,Yerevan</p>
+      <p>📞 +374 55 55-55-55</p>
+      <p>📧 polytech@college.com</p>
+    </div>
+
+    <div>
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">Products</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><span><i class="fa-brands fa-instagram"></i></span></a>
+        <a href="#"><span><i class="fa-brands fa-facebook"></i></span></a>
+        <a href="#"><span><i class="fa-brands fa-twitter"></i></span></a>
+        <a href="#"><span><i class="fa-brands fa-telegram"></i></span></a>
+      </div>
+    </div>
+
+    <div class="newsletter">
+      <h3>Newsletter</h3>
+      <p>Subscribe for updates and offers</p>
+      <input type="email" placeholder="Your email" />
+      <button>Subscribe</button>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2025 GreenLion. All rights reserved.
+  </div>
+</footer>
