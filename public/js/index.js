@@ -1,14 +1,11 @@
 //this part must be transported to the main js file
 const addProductToCart = (p) => {
-    
-    
     let product = JSON.parse(decodeURIComponent(p))
     const isLoggedIn = JSON.parse(localStorage.getItem('user'))
     if (!isLoggedIn) {
         window.location.href = 'login.html';
         return;
     }
-
     let cart = JSON.parse(localStorage.getItem('cart'))
     if (!Array.isArray(cart)) {
         cart = [];
@@ -18,11 +15,8 @@ const addProductToCart = (p) => {
        cart.push(product);
        localStorage.setItem('cart',JSON.stringify(cart))
     }
-
     window.dispatchEvent(new Event('cartUpdated'))
-
     renderHtml()
-
 }
 
 

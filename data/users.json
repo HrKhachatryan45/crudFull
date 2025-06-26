@@ -19,5 +19,12 @@
     "email": "rocket@mail.ru",
     "password": "123",
     "isAdmin": false
+  },
+  {
+    "id": 4,
+    "name": "Hrahat",
+    "email": "hrahatkhachatryan058@gmail.com",
+    "password": "123",
+    "isAdmin": false
   }
 ]
