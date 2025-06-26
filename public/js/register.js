@@ -31,7 +31,8 @@ form.addEventListener('submit', async (event) => {
     successDiv.textContent = 'Successfully Registered!'
     successDiv.classList.add('success-msg')
 
-    localStorage.setItem('user',JSON.stringify(json))
+       localStorage.setItem('user',JSON.stringify(json.user))
+    localStorage.setItem('token',JSON.stringify(json.token))
     setTimeout(() => {
         window.location.href = 'index.html'
     },2000)

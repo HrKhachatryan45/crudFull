@@ -5,7 +5,7 @@ const protectRoute =async (req, res, next) => {
         const filePath = path.resolve('data','users.json');
     
     try {
-        const token = req.cookies.jwt
+        const token = req.headers.authorization?.split(' ')[1]
         if (!token){
             return res.status(401).json({error:'No token provided'})
         }

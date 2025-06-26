@@ -1,0 +1,26 @@
+[
+  {
+    "id": 4,
+    "title": "rehhrer",
+    "price": "rehhr",
+    "imagePath": "uploads\\1750924433297-Screenshot 2025-03-24 113400.png"
+  },
+  {
+    "id": 9,
+    "title": "ehrerh",
+    "price": "rerherh",
+    "imagePath": "uploads\\1750924439671-Screenshot 2023-12-18 103842.png"
+  },
+  {
+    "id": 5,
+    "title": "Another prroduct",
+    "price": "50",
+    "imagePath": "uploads\\1750932677192-Screenshot 2025-06-04 085432.png"
+  },
+  {
+    "id": 4,
+    "title": "product",
+    "price": "102",
+    "imagePath": "uploads\\1750936059836-fe.png"
+  }
+]

@@ -57,7 +57,7 @@ const register = async (req,res) => {
             secure: process.env.NODE_ENV !== 'development',
         })
 
-        res.status(200).json(user)
+        res.status(200).json({user,token})
 
 
 
@@ -92,14 +92,10 @@ const {email,password} = req.body;
 
        const token =  jwt.sign({userId:user.id},process.env.JWT_SECRET,{expiresIn:'4d'})
 
-       res.cookie('jwt', token, {
-            maxAge: 15 * 24 * 60 * 60 * 1000,
-            httpOnly: true,
-            sameSite: 'strict',
-            secure: process.env.NODE_ENV !== 'development',
-        })
+     
+        
 
-        res.status(200).json(user)
+        res.status(200).json({user,token})
 
     } catch (error) {
         console.log(error);

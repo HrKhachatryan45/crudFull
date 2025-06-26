@@ -1,0 +1,164 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f1f8f4;
+}
+
+.d1 {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+.bella {
+    background-color: #e8f5e9;
+    border: 2px solid #66bb6a;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(102, 187, 106, 0.2);
+    padding: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    transition: transform 0.2s ease-in-out;
+}
+
+.bella:hover {
+    transform: scale(1.02);
+}
+
+.bella img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.bella h1 {
+    font-size: 18px;
+    color: #2e7d32;
+    margin: 8px 0;
+    text-align: center;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+.bella p {
+    font-size: 16px;
+    color: #388e3c;
+    margin: 0 0 10px;
+    font-weight: bold;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+#buxanka,
+#kalabok {
+    background-color: #66bb6a;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 5px 5px 0 5px;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    width: fit-content;
+    right: 20px;
+    bottom: 55px;
+}
+
+#buxanka:hover {
+    background-color: #43a047;
+}
+
+#kalabok {
+    background-color: #ef5350;
+    bottom: 10px;
+}
+#buxankaX{
+    background-color: #43a047;
+    
+}
+#kalabokX {
+    background-color: #d32f2f;
+}
+
+
+#kalabok:hover {
+    background-color: #d32f2f;
+}
+
+/* Input fields and Update button */
+.bella input {
+    width: 100%;
+    padding: 5px 0;
+    padding-left: 15px;
+    box-sizing: border-box;
+    margin: 5px 0;
+    border: 1px solid #a5d6a7;
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+}
+
+.bella button:last-child {
+    width: 100%;
+    background-color: #66bb6a;
+    border: 0;
+    padding: 8px;
+    border-radius: 5px;
+    color: white;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.product-form {
+    width: 400px;
+    margin: 30px auto;
+    background-color: #e8f5e9;
+    border: 2px solid #66bb6a;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(102, 187, 106, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.product-form h2 {
+    margin: 0 0 10px;
+    color: #2e7d32;
+    text-align: center;
+}
+
+.product-form input[type="text"],
+.product-form input[type="file"] {
+    padding: 10px;
+    border: 1px solid #a5d6a7;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #ffffff;
+    outline: none;
+}
+
+.product-form button[type="submit"] {
+    background-color: #43a047;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.product-form button[type="submit"]:hover {
+    background-color: #2e7d32;
+}

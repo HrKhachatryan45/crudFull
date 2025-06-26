@@ -9,7 +9,7 @@ form.addEventListener('submit', async (event) => {
   try {
     const response = await fetch('http://localhost:8080/auth/login', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', },
       body: JSON.stringify({ email, password }),
     });
 
@@ -30,7 +30,8 @@ form.addEventListener('submit', async (event) => {
     successDiv.textContent = 'Successfully Logged In!'
     successDiv.classList.add('success-msg')
 
-    localStorage.setItem('user',JSON.stringify(json))
+    localStorage.setItem('user',JSON.stringify(json.user))
+    localStorage.setItem('token',JSON.stringify(json.token))
     setTimeout(() => {
         window.location.href = 'index.html'
     },2000)
@@ -42,3 +43,11 @@ form.addEventListener('submit', async (event) => {
 
   }
 });
+
+window.addEventListener('load',() => {
+  const user = JSON.parse(localStorage.getItem('user'));
+
+    if (!user) {
+      document.getElementById('cart-quantity').style.display = 'none'
+    }
+})

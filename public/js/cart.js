@@ -1,31 +1,15 @@
-//this part must be transported to the main js file
-const addProductToCart = (product) => {
-    const isLoggedIn = JSON.parse(localStorage.getItem('user'))
-    if (!isLoggedIn) {
-        window.location.href = 'login.html';
-        return;
-    }
-
-    let cart = JSON.parse(localStorage.getItem('cart'))
-    if (!Array.isArray(cart)) {
-        cart = [];
-    }
-    let exists = cart.find((productX) => productX.id.toString() == product.id.toString())
-    if (!exists) {
-       cart.push(product);
-       localStorage.setItem('cart',JSON.stringify(cart))
-    }
-}
-
-
 const removeProductFromCart = (id) => {
     let cart = JSON.parse(localStorage.getItem('cart'))
     if (!Array.isArray(cart)) {
         cart = [];
     }
 
+
+
     cart = cart.filter((productX) => productX.id.toString() != id.toString())
     localStorage.setItem('cart',JSON.stringify(cart))
+    window.dispatchEvent(new Event('cartUpdated'))
+
 }
 
 
@@ -53,9 +37,9 @@ const showCart = () => {
     item.className = "cart-item";
 
     item.innerHTML = `
-      <img src="${product.image}" alt="${product.name}" class="cart-item-img" />
+      <img src="../../${product.imagePath}" alt="${product.title}" class="cart-item-img" />
       <div class="cart-item-details">
-        <div class="cart-item-title">${product.name}</div>
+        <div class="cart-item-title">${product.title}</vdiv>
         <div class="cart-item-price">$${product.price}</div>
       </div>
       <button class="remove-btn" onclick="removeProductFromCart('${product.id}'); showCart();">Remove</button>

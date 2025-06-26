@@ -8,9 +8,16 @@
   },
   {
     "id": 2,
-    "name": "Shaw",
+    "name": "Hannibal",
     "email": "hannibal@mail.ru",
-    "password": "dw",
+    "password": "admin123",
+    "isAdmin": false
+  },
+  {
+    "id": 3,
+    "name": "rocket",
+    "email": "rocket@mail.ru",
+    "password": "123",
     "isAdmin": false
   }
 ]
